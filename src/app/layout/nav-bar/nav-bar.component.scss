@@ -1,0 +1,37 @@
+nav {
+  position: static;
+  width: 100%;
+  height: auto;
+  // background-color: var(--mat-sidenav-container-background-color);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+nav ul li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.side-menu-button {
+  margin-left: 1rem;
+}
+
+.user-menu-button {
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.logo {
+  width: 8rem;
+  padding-left: 1rem;
+  margin: 0.5rem;
+}

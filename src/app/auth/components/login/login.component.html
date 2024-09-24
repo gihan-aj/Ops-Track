@@ -1,0 +1,47 @@
+<div class="login-card">
+  <div class="col">
+    <span>
+      <img class="logo" src="/logo/logo-3.png" alt="Logo" />
+    </span>
+    <h2>Sign in</h2>
+    <p>Use your email and password.</p>
+  </div>
+
+  <div class="col">
+    <form>
+      <mat-form-field class="form-field">
+        <mat-label>Email</mat-label>
+        <input
+          type="email"
+          matInput
+          [formControl]="emailFormControl"
+          placeholder="Ex. username@example.com"
+        />
+        @if (emailFormControl.hasError('email') &&
+        !emailFormControl.hasError('required')) {
+        <mat-error>Please enter a valid email address</mat-error>
+        } @if (emailFormControl.hasError('required')) {
+        <mat-error>Email is <strong>required</strong></mat-error>
+        }
+      </mat-form-field>
+
+      <mat-form-field class="form-field">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput [formControl]="passwordFormControl" />
+        @if (passwordFormControl.hasError('required')) {
+        <mat-error>Password is <strong>required</strong></mat-error>
+        }
+      </mat-form-field>
+
+      <span class="forgot-btn">
+        <a mat-button routerLink="/forgot-email-password"
+          >Forgot Email or Password?</a
+        >
+      </span>
+      <div class="submit-field">
+        <a class="mt-1" mat-button routerLink="/register">Create a new Account</a>
+        <a class="ml-1 mt-1" mat-flat-button type="submit">Sign In</a>
+      </div>
+    </form>
+  </div>
+</div>

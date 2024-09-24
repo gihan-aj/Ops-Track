@@ -1,1 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  box-sizing: border-box;
+  //  This makes sure that when you set widths and heights on elements, padding and border are included in the total width/height calculation, instead of being added on top. It's a useful setting because it makes layout calculations simpler and more predictable.
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  // *:before and *:after target pseudo-elements that may be added to any element (using ::before and ::after CSS properties).
+  box-sizing: inherit;
+  // This makes sure that every element, including pseudo-elements, inherit the box-sizing rule from their parent element. Since html and body are set to border-box, all elements on the page will follow this rule, making sure all elements behave consistently in terms of width and height.
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960x;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.app-card {
+  //   display: flex;
+  //   flex-flow: column wrap;
+  width: fit-content;
+  text-align: center;
+  padding: 2rem;
+  margin: auto;
+  background-color: var(--mat-app-background-color);
+  border-radius: var(--mdc-outlined-card-container-shape);
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}

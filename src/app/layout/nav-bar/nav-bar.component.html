@@ -1,0 +1,37 @@
+<nav>
+  <ul>
+    <li class="side-menu-button">
+      <a mat-icon-button aria-label="Side menu" (click)="onToggleSideMenu()">
+        <mat-icon>menu</mat-icon>
+      </a>
+    </li>
+
+    <!-- @if (!sideMenuVisible()) { -->
+    <li [@fadeInOut]="sideMenuVisible() ? 'out' : 'in'">
+      <span>
+        <img class="logo" src="/logo/logo-3.png" alt="Logo" />
+      </span>
+    </li>
+    <!-- } -->
+
+    <li class="user-menu-button">
+      <a
+        mat-icon-button
+        [mat-menu-trigger-for]="userMenu"
+        aria-label="User menu"
+      >
+        <mat-icon>person</mat-icon>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<mat-menu #userMenu="matMenu">
+  @for (item of userMenuItems; track $index) {
+
+  <button routerLink="{{ item.routerLink }}" mat-menu-item>
+    <mat-icon>{{ item.icon }}</mat-icon>
+    <span>{{ item.name }}</span>
+  </button>
+  }
+</mat-menu>
