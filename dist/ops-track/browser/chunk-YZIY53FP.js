@@ -1,0 +1,1 @@
+import{Ob as a,Vb as m,ea as o,vb as p,wb as r}from"./chunk-RA6SY52D.js";var e=class n{static \u0275fac=function(t){return new(t||n)};static \u0275cmp=o({type:n,selectors:[["app-departments"]],standalone:!0,features:[m],decls:2,vars:0,template:function(t,i){t&1&&(p(0,"p"),a(1,"departments works!"),r())}})};var u=[{path:"departments",component:e}];export{u as registerRoute};
